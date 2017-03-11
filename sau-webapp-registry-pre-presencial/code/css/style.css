@@ -1,0 +1,602 @@
+.title-option{
+  color: black;
+  border-bottom: 2px solid blue;
+  width: 100%;
+}
+
+.option{
+  border: 1px solid #9BA8AD;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 240px;
+}
+
+.container-option{
+  margin-bottom: 10px;
+
+}
+
+.view {
+    bottom:0;
+    top:0;
+    padding-bottom: 30px;
+    width:100%;
+    min-height: 450px;
+
+}
+
+/* ANIMACIONES*/
+/* slide in from the right */
+@-webkit-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@-webkit-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@-moz-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@keyframes slideOutLeft { to { transform: translateX(-100%); }}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.8s;
+-moz-animation-delay:0.8s;
+animation-delay: 0.8s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay: 1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+
+.ng-enter  { animation: slideInRight 1.0s both ease-in; z-index: 8888; }
+.ng-leave  { animation: slideOutLeft 0.7s both ease-in; z-index: 9999; }
+
+/*FIN ANIMACIONES*/
+
+.center{
+  float: none;
+  margin: 0 auto;
+}
+
+.principal{
+  height: 100px !important;
+  padding: 10px !important;
+}
+
+.button-bottom{
+  position: absolute !important;
+  bottom:   20px !important;
+}
+
+.top-bar{
+  /*margin-top: 0px;
+  margin-bottom: 0px;*/
+  background-color: #23282E;
+  height: 50px;
+  width: 108%;
+  margin-left: -5%;
+}
+.contenido-principal{
+  margin-left: 40px;
+}
+.notification{
+  background-color: #23282E;
+
+  text-align: right;
+  margin: auto;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  color: #E1FFFF;
+}
+
+.large{
+  font-size: 14px
+}
+
+.accion{
+ width: 30px;
+}
+
+.accion-fedatario{
+ width: 20px;
+ height: 20px;
+ font-size: 8px;
+}
+
+.capitalize {
+   text-transform: capitalize;
+}
+
+table.aplicaciones {
+    width: 953px;
+    background: #EAEAEA;
+    overflow-x: scroll;
+}
+
+table.instituciones{
+    width: 853px;
+    background: #EAEAEA;
+    overflow-x: scroll;
+}
+
+table.solicitudesActivar{
+    width: 1000px;
+    background: #EAEAEA;
+    overflow-x: scroll;
+}
+
+
+table.solicitud{
+    width: 1850px;
+    background: #EAEAEA;
+    overflow-x: scroll;
+}
+
+table.solicitudAdmin{
+    width: 1250px;
+    background: #EAEAEA;
+    overflow-x: scroll;
+}
+
+thead tr {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+.small-table {
+    width: auto;
+    background: #EAEAEA;
+    height: 60px !important;
+
+    /*overflow-x: scroll;*/
+}
+.small-table-body {
+    width: 100%;
+    height: 60px !important;
+    /*overflow-y: auto;
+    display: block;*/
+
+}
+
+
+thead th {
+    width: 430px;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid #EEEEEE;
+    background-color: #CDCDCD;
+    height: 30px;
+}
+
+thead th:nth-child(1) {
+    width: 70px;
+}
+
+tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+tr:nth-child(odd) {
+    background-color: #EEF5F9;
+}
+
+thead th:nth-child(9) {
+    width: 430px;
+}
+caption{
+  text-align: center;
+  font-weight: bold;
+  background-color: #FFFFFF;
+}
+tbody {
+    width: 100%;
+    height: 100px;
+    overflow-y: auto;
+    display: block;
+}
+
+td:nth-child(1){
+  width: 90px;
+}
+
+td {
+  font-size: 12px;
+  width: 430px;
+  padding: 3px 3px 3px 3px;   /*top right bottom left*/
+}
+
+td:nth-child(6), td:nth-child(7){
+  width: 200px;
+  text-align: right;
+}
+
+td:nth-child(8){
+  text-align: center;
+}
+
+td:nth-child(9){
+    width: 480px;
+}
+
+.wrapper {
+    overflow-x: auto;
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.th-margin{
+  padding-left: 20px;
+}
+
+.select-title{
+  font-size: 12px;
+}
+
+.vista{
+  /*width: 400px !important;*/
+  z-index: 9999999999;
+}
+
+.modal{
+  z-index: 9999999999 !important;
+}
+/*.boton{
+  color: #FF0000;
+}*/
+
+.msg-error{
+  color: red;
+  font-weight: bold !important;
+  font-size: 11px !important;
+  text-align: justify !important;
+}
+
+/* Feedback de validaciones */
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+	border: 1px solid #C80808;
+}
+
+.order{
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  color: #0055FF;
+  background-color: #ffffff;
+  padding: 4px 4px 4px 4px;
+  cursor: pointer;
+}
+
+.order:hover{
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 4px 4px 4px 4px;
+  cursor: pointer;
+}
+
+input{
+  color: #2E353D;
+}
+
+.usuario{
+  margin-top: 0px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.btn-blue{
+  background-color: #00286C !important;
+  color: white !important;
+}
+.btn-blue:hover{
+  background-color: white !important;
+  color: #00286C !important;
+  font-weight: bold;
+}
+
+/*TABLA INSTITUCIONES*/
+.enum{
+  width: 80px !important;
+  text-align: center !important;
+}
+.td-enum{
+  width: 130px !important;
+  text-align: center !important;
+}
+.ruc{
+  width: 180px !important;
+  text-align: center !important;
+}
+.td-ruc{
+  width: 180px !important;
+  text-align: center !important;
+  border-left: 2px solid #eeeeee !important;
+  border-right: 2px solid #eeeeee !important;
+}
+.nombre{
+  /*width: 250px !important;*/
+  width: 370px !important;
+  text-align: center !important;
+}
+
+.td-nombre{
+  width: 370px !important;
+  text-align: left !important;
+  border-right: 2px solid #eeeeee !important;
+  border-left: 2px solid #eeeeee !important;
+}
+
+.estado, .td-estado{
+  width: 200px !important;
+  text-align: center !important;
+
+}
+
+.td-estado{
+  border-right: 2px solid #eeeeee !important;
+}
+
+.td-radio{
+  width: 50px !important;
+  border-right: 2px solid #eeeeee !important;
+  text-align: center !important;
+}
+
+/**/
+
+/*TABLA APLICACIONES*/
+
+.enumApp{
+  width: 80px !important;
+  text-align: center !important;
+}
+.td-enumApp{
+  width: 80px !important;
+  text-align: center !important;
+}
+
+.id{
+  width: 80px !important;
+  text-align: center !important;
+}
+.td-id{
+  width: 80px !important;
+  text-align: center !important;
+  border-left: 2px solid #eeeeee !important;
+}
+
+.nombreApp{
+  /*width: 250px !important;*/
+  width: 280px !important;
+  text-align: center !important;
+}
+
+.td-nombreApp{
+  width: 280px !important;
+  text-align: left !important;
+  border-right: 2px solid #eeeeee !important;
+  border-left: 2px solid #eeeeee !important;
+}
+
+
+.descripcion{
+  width: 390px !important;
+  text-align: center !important;
+}
+.td-descripcion{
+  width: 390px !important;
+  text-align: left !important;
+  border-right: 2px solid #eeeeee !important;
+}
+/**/
+
+/*TABLA documentos*/
+
+.enumApp{
+  width: 80px !important;
+  text-align: center !important;
+}
+.td-enumApp{
+  width: 80px !important;
+  text-align: center !important;
+}
+
+.id{
+  width: 80px !important;
+  text-align: center !important;
+}
+.td-id{
+  width: 80px !important;
+  text-align: center !important;
+  border-left: 2px solid #eeeeee !important;
+}
+
+.archivo{
+  width: 290px !important;
+  text-align: center !important;
+}
+.td-archivo{
+  width: 290px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+.adjuntar{
+  width: 190px !important;
+  text-align: center !important;
+}
+.td-adjuntar{
+  width: 190px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+.eliminar{
+  width: 190px !important;
+  text-align: center !important;
+}
+.td-eliminar{
+  width: 190px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+/**/
+
+.archivoVer{
+  width: 400px !important;
+  text-align: center !important;
+}
+.td-archivoVer{
+  width: 400px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+
+.ver{
+  width: 190px !important;
+  text-align: center !important;
+}
+.td-ver{
+  width: 190px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color:  #00286C;
+    color: white !important;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background-color:  #00286C;
+    color: white !important;
+    cursor: inherit;
+    display: block;
+}
+
+.btn-file:hover{
+  background-color: white !important;
+  color: #00286C !important;
+  font-weight: bold;
+}
+
+/*TABLA instituciones*/
+.th-institucion{
+  width: 300px !important;
+  text-align: center !important;
+}
+.td-institucion{
+  width: 300px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+.th-nombre{
+  width: 300px !important;
+  text-align: center !important;
+}
+.td-nombre{
+  width: 300px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+
+.th-cedula{
+  width: 200px !important;
+  text-align: center !important;
+}
+.td-cedula{
+  width: 200px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+
+.th-rol{
+  width: 400px !important;
+  text-align: center !important;
+}
+.td-rol{
+  width: 400px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+}
+.th-fecha{
+  width: 150px !important;
+  text-align: center !important;
+}
+.td-fecha{
+  width: 150px !important;
+  text-align: center !important;
+  border-right: 2px solid #eeeeee !important;
+  border-left: 2px solid #eeeeee !important;
+}
+/**/
+.input-estado{
+  background-color: transparent !important;
+  border: 0px !important;
+  text-align: center !important;
+
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, select.ng-invalid.ng-touched{
+	border: 1px solid #C80808;
+}
+
+label{
+  margin-top: 7px !important;
+}
+
+/*li.myClass a {
+    display: block !important;
+}*/

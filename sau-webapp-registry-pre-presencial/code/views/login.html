@@ -1,0 +1,12 @@
+<div ng-controller="loginController as login" >
+  <!-- vistas  -->
+  <h1 style="text-align: center;">SAU ENROLAMIENTO</h1>
+   <div id="login" ng-controller="loginController" class="col-lg-4 col-md-4 col-sm-12 center">
+     <h2 style="text-align: center;"><!--<img src="img/user.png"/>-->Login</h2>
+     <form ng-submit="redirectToPrincipal()" novalidate>
+       <formly-form model="login.model" fields="login.modelFields" form="login.modelForm">
+         <button type="submit" class="btn btn-default col-lg-12 col-md-12 col-sm-12 center" >Iniciar sesión</button>
+       </formly-form>
+     </form>
+   </div>
+</div>

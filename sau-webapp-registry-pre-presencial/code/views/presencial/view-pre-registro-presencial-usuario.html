@@ -1,0 +1,99 @@
+<div class="row jumbotron">
+	<div ng-controller="presencialUsuarioController as presencialUsuario" >
+		<div style="text-align: center;">
+			<!-- <img src="img/pass.png"/> -->
+			<h2>Pre-registro presencial de usuarios</h2>
+		</div>
+		<div class="form-group col-lg-9 col-md-12 col-sm-12 center" >
+			<hr>
+			<div class="alert alert-info" role="alert">
+				<strong>
+					Ingrese todos los datos que se piden a continuación para registrarse en el portal.
+					<br>
+					Todos los campos con (*) son obligatorios.
+				</strong>
+			</div>
+			<div ng-bind-html="alertaEstado">
+			</div>
+		</div>
+		<div id="datos-presencialUsuario" class="col-lg-6 col-md-12 col-sm-12 center">
+			<form id="presencialUsuario" ng-submit="sendMessage()" name="presencialUsuario.form" novalidate>
+				<hr>
+				<!-- <label>Tipo de Usuario:</label>
+				<div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+				<input type="radio" ng-model="tipoUsuario" value="ciudadano" name="ciudadano" ng-checked="true" onclick="tipoUsuarioCheck('ciudadano', this)">
+				<label class="radio-inline">Ciudadano</label>
+			</div>
+
+			<div class="col-lg-6 col-md-12 col-sm-12">
+			<input type="radio" ng-model="tipoUsuario" value="juridico" name="juridico" onclick="tipoUsuarioCheck('juridico',this)">
+			<label class="radio-inline">Persona Jurídica</label>
+		</div>
+	</div> -->
+	<formly-form model="presencialUsuario.model" fields="presencialUsuario.modelFields" form="presencialUsuario.modelForm">
+		<!-- <pre>{{ presencialUsuario.model | json }}</pre> -->
+	</formly-form>
+
+	<div class="row">
+		<div class="col-lg-5 col-md-12 col-sm-12">
+			<label>Fotografía:</label>
+			<img ng-src="{{fotografia}}" ng-model="model.presencialUsuario.fotografia" id="fotografia" width="135" height="160">
+		</div>
+
+		<div class="col-lg-7 col-md-12 col-sm-12">
+			<label>Firma:</label>
+			<img ng-src="{{firma}}" ng-model="model.presencialUsuario.firma" id="firma" width="215" height="80">
+		</div>
+	</div>
+	<br>
+	<div class="row" ng-show="presencialUsuario.model.tipoUsuario=='567' || presencialUsuario.model.tipoUsuario=='568'">
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<label>Pre-registrar Usuario:</label>
+		</div>
+		<div class="col-lg-3 col-md-12 col-sm-12">
+			<input type="radio" ng-model="preregistroUsuario" value="si" ng-checked="true">
+			<label class="radio-inline">Sí</label>
+		</div>
+		<div class="col-lg-3 col-md-12 col-sm-12">
+			<input type="radio" ng-model="preregistroUsuario" value="no">
+			<label class="radio-inline">No</label>
+		</div>
+	</div>
+
+	<div ng-show="preregistroUsuario=='no'">
+		<br>
+		<label for="observaciones">Observaciones: *</label>
+		<textarea class="form-control" ng-model="observaciones" id="observaciones" name="observaciones" ng-maxlength="500" required="true" pattern="^$|^[A-Za-zÀ-ú0-9üÜ ]+" placeholder="Ingrese observación" type="textarea"></textarea>
+		<br>
+	</div>
+	<br>
+	<div ng-bind-html="alerta">
+	</div>
+	<p>
+		<a class="btn btn-default" href="#/presencial" role="button">&laquo; Cancelar </a>
+		<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bd-example-modal-sm" ng-disabled="{{validacion}}">Enviar</button>
+	</p>
+	<div id="myModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Confirmación</h4>
+				</div>
+				<div class="modal-body">
+					¿Está seguro que desea enviar?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					<input type="submit" class="btn btn-primary" value="Si" />
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+</div>
+</div>
