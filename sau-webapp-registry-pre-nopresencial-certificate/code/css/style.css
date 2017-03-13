@@ -1,0 +1,144 @@
+.title-option{
+  color: black;
+  border-bottom: 2px solid blue;
+  width: 100%;
+}
+
+.option{
+  border: 1px solid #9BA8AD;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 240px;
+}
+
+.container-option{
+  margin-bottom: 10px;
+
+}
+
+.view {
+    bottom:0;
+    top:0;
+    padding-bottom: 30px;
+    width:100%;
+    min-height: 450px;
+
+}
+
+/* ANIMACIONES*/
+/* slide in from the right */
+@-webkit-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@-webkit-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@-moz-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@keyframes slideOutLeft { to { transform: translateX(-100%); }}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.8s;
+-moz-animation-delay:0.8s;
+animation-delay: 0.8s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay: 1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+
+.ng-enter  { animation: slideInRight 1.0s both ease-in; z-index: 8888; }
+.ng-leave  { animation: slideOutLeft 0.7s both ease-in; z-index: 9999; }
+
+/*FIN ANIMACIONES*/
+
+.center{
+  float: none;
+  margin: 0 auto;
+}
+
+.principal{
+  height: 100px !important;
+  padding: 10px !important;
+}
+
+.button-bottom{
+  position: absolute !important;
+  bottom:   20px !important;
+}
+
+.top-bar{
+  /*margin-top: 0px;
+  margin-bottom: 0px;*/
+  background-color: #23282E;
+  height: 50px;
+  width: 108%;
+  margin-left: -5%;
+}
+.contenido-principal{
+  margin-left: 40px;
+}
+.notification{
+  background-color: #23282E;
+
+  text-align: right;
+  margin: auto;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  color: #E1FFFF;
+}
+
+.large{
+  font-size: 14px
+}
+
+.accion{
+ width: 30px;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, select.ng-invalid.ng-touched{
+	border: 1px solid #C80808;
+}
